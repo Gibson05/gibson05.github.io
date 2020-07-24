@@ -1,0 +1,52 @@
+/* chú thích trong css */
+h2 {
+    color: blue;
+    background-color: green;
+}
+
+p {
+    color: yellow;
+    font-size: 23px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+}
+#doanvan1 {
+    color: brown;
+}
+.paragraph {
+    background-color:pink;
+    color: red;
+}
+.paragraph2 {
+    color: blue;
+}
+h3, h4 {
+    color: violet;
+    text-align: center;
+    text-decoration: line-through;
+}
+/* style của id ưu tiên hơn class*/
+#container {
+    background-color:blue;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    }
+a {
+    color: white;
+    text-transform: uppercase;
+
+    }
