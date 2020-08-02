@@ -1,10 +1,19 @@
-#title {
+
+.title {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     margin-left: 70px;
     margin-right: 70px;
+}
+.title11 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .title1 {
     display: flex;
@@ -17,7 +26,7 @@
     display: flex;
     width: 50%;
     background-color: #D8D8D8;
-    margin: 20px;
+    margin: 20px 40px 20px 40px;
 }
 .title3 {
     display: flex;
@@ -44,4 +53,152 @@
     height: 300px; 
     align-items: center; 
     flex-direction: column;
+}
+.under {
+    display: flex; 
+    width: 100%; 
+    height: 50px; 
+    align-items: center; 
+    justify-content: center;
+    margin: 10px;
+}
+.under1 {
+    display: flex; 
+    width: 45%; 
+    height: 50px; 
+    background-color: #D8D8D8;
+}
+.triple {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 50px;
+}
+.triple1 {
+    display: flex;
+    width: 20%;
+    height: 150px;
+    background-color: #D8D8D8;
+    margin-right: 30px;
+}
+.triple2 {
+    display: flex;
+    width: 30%;
+    height: 150px;
+    background-color: #D8D8D8;
+    margin-right: 30px;
+}
+.triple3 {
+    display: flex;
+    width: 50%;
+    height: 150px;
+    background-color: #D8D8D8;
+}
+.cottong {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cot1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 33%;
+    height: 1200px;
+    margin: 10px;
+}
+.cot11 {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.cot2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 33%;
+    height: 1200px;
+    margin: 10px;
+}
+.cot21 {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.cot22 {
+    display: flex;
+    width: 100%;
+    height: 650px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.cot3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 33%;
+    height: 1400px;
+    margin: 10px;
+}
+.cot31 {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.cot32 {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.cot33 {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    background-color: #D8D8D8;
+    margin: 10px;
+}
+.mau1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.mau11 {
+    display: flex;
+    width: 16.6%;
+    height: 200px;
+    margin: 0px;
+}
+.mau2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.mau21 {
+    display: flex;
+    width: 16.6%;
+    height: 200px;
+    margin: 0px;
 }

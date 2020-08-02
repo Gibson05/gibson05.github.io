@@ -1,0 +1,28 @@
+#tong {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nhanh {
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+.pagephu {
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+#back {
+    text-align: center;
+}
+.infor {
+    margin: auto;
+    padding: 20px;
+}
