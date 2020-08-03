@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.content {
+    width: 30%;
+    border: 2px solid gray;
+    padding: 20px;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+}
+.image1 {
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+.content:hover .image1 {
+    opacity: 0.5;
+}
+.image2 {
+    transition: all 0.2s linear;
+}
+.content:hover .image2 {
+    transform: translate(0px, -10px);
+    box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.2);
+}
+.content:hover .image3 {
+    transform: scale(1.23);
+    transition: transform 0.25s linear;
+}
+@keyframes title {
+    20% {color: red}
+    40% {color: green}
+    60% {color: blue}
+    80% {color: pink}
+}
+h1 {
+    text-align: center;
+    animation: title 3s infinite;
+}
