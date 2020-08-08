@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.menu {
+    background-color: palegoldenrod;
+    width: 60%;
+    margin: auto;
+    padding: 5px;
+}
+.menu ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.menu ul li {
+    display: inline;
+    line-height: 30px;
+    position: relative;
+}
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu ul li a:hover {
+    color: red;
+}
+.menu ul li > .sub-menu {
+    display: none;
+    position: absolute;
+}
+.menu ul li:hover .sub-menu {
+    display: block;
+}
+.sub-menu {
+    background-color: transparent;
+    width: 100px;
+    padding-top: 5px;
+}
+.sub-menu li a {
+    display: block;
+    width: 100%;
+    background-color: wheat;
+}

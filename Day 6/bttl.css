@@ -1,0 +1,171 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    background-color: #34465C;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 5px 3px 1px rgba(0,0,0,0.4)
+}
+.header1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.header2 {
+    color: white;
+    background-color:#34465C;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header2 ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.header2 ul li {
+    display: inline;
+    line-height: 30px;
+    position: relative;
+}
+.header2 ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px 10px 5px 10px;
+}
+.header2 ul li a:hover {
+    color: #C4C4C4;
+}
+.header2 ul li > .subheader {
+    display: none;
+    position: absolute;
+}
+.header2 ul li:hover .subheader {
+    display: block;
+    
+}
+.subheader {
+    background-color: transparent;
+    width: 100px;
+    padding-top: 5px;
+    position: relative;
+    left: -55px;
+    
+}
+.subheader li a {
+    display: block;
+    width: 160%;
+    color: black;
+    background-color: white;
+    font-size: 11px;
+    border: 1px solid gray;
+}
+ul.subheader li a:hover {
+    color: white;
+    background-color: #C4C4C4;
+    
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "\003e";
+}
+ul.breadcrumb li a {
+    color: black;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+.content1 {
+    background-color: #f4f7fa;
+    padding-left: 80px;
+}
+.maincontent {
+    width: 70%;
+    padding: 20px 70px 20px 70px;
+    background-color: white;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.2)
+}
+span {
+    background-color: #e5e5e5;
+    color: grey;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+.text {
+    text-align: center;
+}
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links {
+    text-decoration: none;
+    color: blue;
+}
+.links:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+.mainfooter {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #464646;
+    width: 100%;
+    height: 350px;
+    padding: 0px 20px 0px 20px;
+}
+.subfooter {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 20%;
+    height: 40%;
+}
+.subfooter ul {
+    list-style: none;
+}
+.subfooter ul li a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #919294;
+    text-transform: uppercase;
+    display: block;
+}
+.subfooter ul li a:hover {
+    text-decoration: underline;
+}
