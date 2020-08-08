@@ -1,7 +1,6 @@
 * {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 .header1 {
@@ -13,12 +12,14 @@
 }
 .header2 {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 97%;
     height: 25px;
     background-color: #f7f7f7;
-    padding: 0px 5px 0px 80px;
+    padding: 0px 0px 0px 40px;
+    margin: 0px;
 }
 .navbar a {
     text-transform: uppercase;
@@ -57,8 +58,12 @@
     height: 50px;
     background-color: #EFF0F5;
 }
-/* background-image: url(https://laz-img-cdn.alicdn.com/images/ims-web/TB11lkAQBr0gK0jSZFnXXbRRXXa.jpg_1200x1200Q100.jpg_.webp);
-    background-size: 100% 100%; */
+nav {
+    background-image: url(https://laz-img-cdn.alicdn.com/images/ims-web/TB11lkAQBr0gK0jSZFnXXbRRXXa.jpg_1200x1200Q100.jpg_.webp);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
 nav ul {
     padding: 0px;
     margin: 0px;
@@ -74,8 +79,8 @@ nav a {
     margin: 0px;
     text-align: left;
     padding: 12px 15px 12px 15px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     text-decoration: none;
     position: relative;
     display: block;
@@ -86,16 +91,20 @@ nav li:hover>a {
     color: orangered;
 }
 nav .submenu1, nav .submenu2 {
-    position: relative;
+    position: absolute;
     display: none;
 }
-nav .submenu1, nav .submenu2 {
-    top: 0;
+nav .submenu1 {
+    top: 185px;
     right: 0;
-    transform: translate(100%,0);
+    left: 200px;
+    width: 18%;
 }
-nav .submenu1 li {
-    position: relative;
+nav .submenu2 {
+    top: 0px;
+    right: 0;
+    left: 240px;
+    width: 100%;
 }
 nav .mainmenu>li:hover .submenu1, nav .submenu1>li:hover>.submenu2 {
     display: block;
