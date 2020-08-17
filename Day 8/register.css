@@ -1,0 +1,85 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #fcfcfd;
+}
+.register {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+    height: 670px;
+    border-radius: 6px;
+    padding: 0px 0px 20px 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+input[id="firstname"], input[id="lastname"] {
+    width: 230px;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+input[id="email"], input[id="password"], input[id="sex"], select[name="othersex"] {
+    width: 480px;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+select[name="infor"] {
+    width: 162.5px;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 10px;
+    border-radius: 6px;
+}
+.sexinfor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 490px;
+    height: 35px;
+}
+.gioitinh {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 162px;
+    height: 30px;
+    border-style: groove;
+    border-color: black;
+    border-radius: 6px;
+    margin: 5px;
+    padding-left: 10px;
+}
+.dangky {
+    display: flex;
+    justify-content: center;
+}
+input[id="submit"] {
+    text-align: center;
+    font-weight: 700;
+    height: 35px;
+    width: 170px;
+    color: white;
+    background-color: #42B72A;
+    font-size: 17px;
+    border-radius: 6px;
+}
+input[id="submit"]:hover {
+    color: #EAECEF;
+}
+.danlink {
+    text-decoration: none;
+}
+.danlink:hover {
+    text-decoration: underline;
+}
+.title {
+    font-size: 30px;
+    font-weight: 900;
+}
