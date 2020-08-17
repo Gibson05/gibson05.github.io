@@ -46,7 +46,7 @@ select[name="infor"] {
 }
 .gioitinh {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     width: 162px;
     height: 30px;
@@ -54,7 +54,7 @@ select[name="infor"] {
     border-color: black;
     border-radius: 6px;
     margin: 5px;
-    padding-left: 10px;
+    padding: 0px 5px 0px 10px;
 }
 .dangky {
     display: flex;
