@@ -1,0 +1,227 @@
+.anhbia {
+    width: 100%;
+    height: 400px;
+    border-radius: 7px;
+}
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 251px;
+    left: 8px;
+    border: 3px solid white;
+}
+.mainheader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 85%;
+    height: 55px;
+    border-radius: 5px;
+    position: absolute;
+    top: 403px;
+    left: 200px;
+    background-image: linear-gradient(to right, #020107, #101227);
+}
+.subnavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    padding-left: 55px;
+}
+.navbar1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 30%;
+}
+.navbar1 a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.01s ease;
+}
+.navbar1 a:hover {
+    color: #94B0DE;
+}
+.navbar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 30%;
+}
+.navbar2 a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #94B0DE
+}
+.maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+    background-color: #E9EBEE;
+    margin-top: 5px;
+    padding: 50px 50px 50px 50px;
+    box-sizing: border-box;
+}
+.summary {
+    text-align: center;
+}
+.summary p {
+    font-size: 17px;
+}
+.slogan {
+    font-size: 16px;
+    font-weight: bold;
+}
+.summaryimg {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sumimg1 {
+    width: 500px;
+}
+.mainfooter {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #101227;
+    padding-left: 50px;
+}
+.mainfooter a {
+    color: white;
+}
+.mainfooter a:hover {
+    color: #94B0DE;
+}
+.mainabout {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9EBEE;
+    margin-top: 5px;
+    padding: 100px 50px 50px 50px;
+}
+.aboutavatar {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 50px;
+}
+.aboutavatar img {
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.summary1 {
+    width: 50%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.maininfor {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E9EBEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.education {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+details {
+    width: 500px;
+    background-color: turquoise;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 2px;
+}
+summary {
+    border-radius: 4px;
+    border: 2px solid black;
+    height: 25px;
+}
+.cloneimg {
+    width: 200px;
+    border: 1px solid gray;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+.cloneimg:hover {
+    transform: scale(1.45);
+}
+.mainprofile {
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #E9EBEE;
+    padding: 0px 50px 50px 50px;
+}
+.item {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.item a {
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.item a:hover {
+    color: #4A80AC;
+    text-decoration: underline;
+}
+.profiletitle {
+    background-color: #E9EBEE;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding: 50px 30px 30px 30px;
+}
