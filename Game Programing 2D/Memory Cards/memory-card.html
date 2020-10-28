@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/memory-card.css">
+    <title>Memory Cards</title>
+    <audio class="flip-sound" >
+        <source src="./music/flip_card_sound_effect.mp3" type="audio/mpeg">
+    </audio>
+</head>
+
+<body>
+    <div class="main-menu">
+        <audio class="main-theme-song" loop>
+            <source src="./music/overwatch_music_01_overture.mp3" type="audio/mpeg">
+        </audio>
+        <div class="main-panel">
+            <div class="main-title">Overwatch Card Game</div>
+            <div class="start-btn"><button>Start</button></div>
+            <div><select name="difficult" id="difficult">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="game">
+        <audio class="game-song" loop>
+            <source src="./music/busan_cities_and_countries_overwatch_theme.mp3" type="audio/mpeg">
+        </audio>
+        <div class="game-title">
+            <div class="player-score">Your Score: 0</div>
+            <div class="text-title">find your heroes card</div>
+            <div class="time">Time Left: 00</div>
+            </div>
+        <div class="game-content">
+            <!-- <div class="game-card" name="ana">
+                <div class="flipper">
+                    <div class="front"><img src="./image/Card-Back.png"></div>
+                    <div class="back"><img src="./image/Ana-Overwatch-Heroes-MTG-Cards.jpg"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+        <div class="end-game-victory">
+            <audio class="victory-song" loop>
+                <source src="./music/overwatch_soundtracks_victory_theme.mp3" type="audio/mpeg">
+            </audio>
+            <audio class="victory-line" autoplay>
+                <source src="./music/overwatch_victory_animation_hd.mp3" type="audio/mpeg">
+            </audio>
+            <div class="end-score-victory">Your Score: 0</div>
+            <div class="restart-button-victory"><button class="restart-btn">Restart</button></div>
+        </div>
+        <div class="end-game-defeat">
+            <audio class="defeat-song" loop>
+                <source src="./music/overwatch_defeat_play_of_the_game.mp3" type="audio/mpeg">
+            </audio>
+            <audio class="defeat-line" autoplay>
+                <source src="./music/overwatch_defeat_screen_black_bg.mp3" type="audio/mpeg">
+            </audio>
+            <div class="end-score-defeat">Your Score: 0</div>
+            <div class="restart-button-defeat"><button class="restart-btn">Restart</button></div>
+        </div>
+</body>
+<script src="./javascript/memory-card.js"></script>
+
+</html>
