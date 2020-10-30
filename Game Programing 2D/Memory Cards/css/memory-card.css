@@ -1,3 +1,7 @@
+@font-face {
+    font-family: koverwatch;
+    src: url(../koverwatch.ttf);
+}
 * {
     box-sizing: border-box;
 }
@@ -21,13 +25,13 @@
     flex-direction: column;
 }
 .main-title {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     font-size: 60px;
     margin-bottom: 390px;
     transform: skew(-16deg);
 }
 .start-btn button {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     width: 150px;
     height: 40px;
     font-size: 30px;
@@ -42,7 +46,7 @@
     background-color: transparent;
 }
 #difficult {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     width: 100px;
     height: 30px;
     font-size: 20px;
@@ -75,7 +79,7 @@
     background-color: transparent;
 }
 .player-score, .time, .text-title {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     font-size: 30px;
     transform: skew(-16deg);
 }
@@ -161,11 +165,11 @@
     color: #FFD24F;
     text-align: center;
     font-size: 50px;
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     transform: skew(-16deg);
 }
 .restart-button-victory button {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     font-style: italic;
     width: 150px;
     height: 50px;
@@ -183,11 +187,11 @@
     color: #FE0036;
     text-align: center;
     font-size: 50px;
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     transform: skew(-16deg);
 }
 .restart-button-defeat button {
-    font-family: "koverwatch", serif;
+    font-family: koverwatch, serif;
     font-style: italic;
     width: 150px;
     height: 50px;
