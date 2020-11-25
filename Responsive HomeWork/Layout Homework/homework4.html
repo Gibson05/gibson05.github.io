@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 15px;
+            width: 100vw;
+        }
+
+        .item {
+            width: 20vw;
+            height: 30px;
+            background-color: blue;
+            margin: 0px 15px 0px 0px;
+        }
+
+        .item:last-child {
+            margin: 0px 0px 0px 40vw;
+        }
+
+        .content {
+            width: 100vw;
+            height: 500px;
+            margin: 15px;
+            background-color: blue;
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                height: 30px;
+                width: 30vw;
+            }
+            .item:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            .content {
+                margin: 0px 15px 15px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="content"></div>
+    </div>
+</body>
+
+</html>
