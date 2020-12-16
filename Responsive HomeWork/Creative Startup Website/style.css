@@ -1,4 +1,8 @@
 @font-face {
+    font-family: ProDisplay;
+    src: url(Font/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+@font-face {
     font-family: Lato;
     src: url(Font/Lato-Regular.ttf);
 }
@@ -17,6 +21,9 @@
 }
 .font-latobold {
     font-family: 'LatoBold';
+}
+.font-prodisplay {
+    font-family: 'ProDisplay';
 }
 
 /* Font-size */
@@ -38,6 +45,9 @@
 .font-size24 {
     font-size: 24px;
 }
+.font-size28 {
+    font-size: 28px;
+}
 .font-size48 {
     font-size: 48px;
 }
@@ -46,6 +56,17 @@
 }
 .font-size82 {
     font-size: 82px;
+}
+
+/* Line Height: */
+.line-h24 {
+    line-height: 1.71;
+}
+.line-h30 {
+    line-height: 2.1;
+}
+.line-h35 {
+    line-height: 1.45;
 }
 
 /* Color: */
@@ -112,12 +133,13 @@
     outline: none;
     box-shadow: 0px 4px 20px -4px rgba(203, 64, 47, 0.341542);
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 .menu-btn button:hover {
     background-color: #e83f2a;
 }
 .sub-menu {
-    width: 25%;
+    width: 20%;
     height: 65px;
     display: flex;
     flex-direction: row;
@@ -125,8 +147,16 @@
     align-items: center;
 }
 .logo {
-    width: 10%;
+    width: 15%;
     height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.logo:hover {
+    color:  #e83f2a;
 }
 .menu-item {
     width: calc(100% / 3);
@@ -169,7 +199,6 @@
     color: #e83f2a;
 } 
 .scrolldown-text {
-    font-size: 18px;
     margin-bottom: 5px;
 }
 .chevron {
@@ -218,6 +247,7 @@
     box-shadow: 0px 7px 20px -12px rgba(144, 144, 144, 0.798432);
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 .au-btn button:hover {
     background-color: #30409d;
@@ -288,6 +318,7 @@
     padding-bottom: 3px;
     cursor: pointer;
     filter: drop-shadow(0px 10px 21px rgba(0, 0, 0, 0.185547));
+    transition: all 0.1s linear;
 }
 .team-btn button:hover {
     background-color: #30409d;
@@ -330,19 +361,27 @@
     width: 20%;
     padding: 18px 24px 30px 31px;
     margin-right: calc(40% / 3);
-    background: #FDFDFD;
+    background-color: #FDFDFD;
     box-shadow: 0px 4px 21px -5px rgba(97, 97, 97, 0.233752);
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.1s linear;
+}
+.process-item1:hover {
+    background-color: #f5f5f5;
 }
 .process-item2 {
     width: 20%;
     padding: 18px 24px 30px 31px;
     margin-left: calc(40% / 3);
-    background: #FDFDFD;
+    background-color: #FDFDFD;
     box-shadow: 0px 4px 21px -5px rgba(97, 97, 97, 0.233752);
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.1s linear;
+}
+.process-item2:hover {
+    background-color: #f5f5f5;
 }
 .process-item-number {
     width: 100%;
@@ -370,6 +409,10 @@
     box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.185547);
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.1s linear;
+}
+.stats-group-item:hover {
+    background-color: #e83f2a;
 }
 .stats-group-item div {
     text-align: center;
@@ -379,25 +422,48 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 18px 100px 0px 100px;
-    /* height: 172px; */
 }
 .icon1 {
-   padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
 }
 .icon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 .icon3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 .icon4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 .icon5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 .icon6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 .news {
     margin: 261px 148px 0px 148px;
@@ -470,6 +536,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: all 0.1s linear;
     box-shadow: 0px 7px 20px -12px rgba(144, 144, 144, 0.798432);
 }
 .news-button button:hover {
@@ -547,6 +614,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 .validate-btn button:hover {
     background-color: #e83f2a;
@@ -559,31 +627,53 @@
     justify-content: space-between;
     align-items: center;
 }
-.language-select {
-    display: flex;
-    justify-content: flex-end;
-    width: 20%;
-}
 .footer-logo {
     width: 10%;
+    cursor: pointer;
 }
 .footer-menu {
-    width: 10%;
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 80px;
+}
+.footer-menu-group {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-menu-item {
+    width: 100%;
+    cursor: pointer;
 }
 .privacy-policy {
-    width: 15%;
+    width: 10%;
+    text-align: end;
+    cursor: pointer;
 }
 .legal-notice {
-    width: 15%;
+    width: 10%;
+    text-align: end;
+    cursor: pointer;
+}
+.language-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
 }
 .language-select select {
     border: none;
     outline: none;
+    cursor: pointer;
 }
 .icon-social {
     width: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+.icon-social img {
+    cursor: pointer;
 }
 @media (max-width: 768px) {
     /* Font-size */
@@ -605,6 +695,9 @@
     .font-size24 {
         font-size: 12px;
     }
+    .font-size28 {
+        font-size: 13px;
+    }
     .font-size48 {
         font-size: 24px;
     }
@@ -614,10 +707,14 @@
     .font-size82 {
         font-size: 33px;
     }
+    .line-h30 {
+        line-height: 1.4;
+    }
+    .header-bg {
+        background-image: none;
+    }
     .main-body {
-        background-image: url(background/Background-full2.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-image: none;
     }
     .humburger {
         display: flex;
@@ -625,6 +722,7 @@
         background-color: #EB5B49;
         position: relative;
         border-radius: 5px;
+        transition: all 0.1s linear;
     }
     .humburger img {
         height: 30px;
@@ -664,6 +762,9 @@
     }
     .show {
         display: flex;
+    }
+    .chevron {
+        font-size: 15px;
     }
     .text-banner {
         width: 70%;
@@ -740,33 +841,30 @@
     .stats-group {
         padding: 30px 0px 30px 0px;
     }
+    .stats-group-item {
+        padding: 20px 5px 20px 5px;
+    }
     .icon1 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
     .icon2 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
     .icon3 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
     .icon4 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
     .icon5 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
     .icon6 {
-        position: static;
         height: 50px;
         margin: 10px 10px 10px 10px;
     }
@@ -816,21 +914,14 @@
         padding: 0px 20px 0px 20px;
     }
     .first-form {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+        grid-template-columns:auto;
+        grid-row-gap: 10px;
         margin: 30px 0px 30px 0px;
     }
     .drag-drop {
         height: 120px;
         padding: 30px 0px 30px 0px;
         margin-bottom: 32px;
-    }
-    .footer {
-        width: 100%;
-        height: 50px;
-        padding: 0px 40px 0px 40px;
     }
     .icon-social img {
         height: 10px;
@@ -865,5 +956,31 @@
     .validate-btn button {
         width: 50%;
         height: 20px;
+    }
+    .footer {
+        width: 100%;
+        height: 80px;
+        padding: 0px 10px 0px 10px;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .footer-menu {
+        width: 25%;
+        margin-right: 0px;
+    }
+    .privacy-policy {
+        width: 20%;
+    }
+    .legal-notice {
+        width: 20%;
+        text-align: end;
+        cursor: pointer;
+    }
+    .language-select {
+        width: 20%;
+    }
+    .icon-social {
+        width: 15%;
     }
 }

@@ -7,28 +7,21 @@ function convertCelciusToFahrenheit(number) {
 
 // ●  Bài 2: Cho 1 mảng có độ dài lớn hơn 2, chứa các số khác nhau. Hãy viết hàm tìm ra số lớn thứ nhì trong mảng.
 function secondBiggestNumber(arr) {
-    var sortarr = arr.sort().reverse();
-    for (var i = 0; i < sortarr.length; i++) {
-        if (sortarr[i] > sortarr[i + 1]) {
-            return sortarr[i + 1];
-        }
-    }
+    arr.sort().reverse();
+    return arr[1];
 }
 
 // ●  Bài 3: Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất.
 function longestElement(arr) {
-    var elementLength = [];
-    var longestElement = [];
-    for (i = 0; i<arr.length; i++) {
-        elementLength.push(arr[i].length);
-    }
-    var maxLength = Math.max(...elementLength);
-    for (i = 0; i<arr.length; i++) {
-        if (arr[i].length == maxLength){
-            longestElement.push(arr[i]);
+    var longest;
+    var itemLenght = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length > itemLenght) {
+            var itemLenght = arr[i].length;
+            longest = arr[i];
         }
     }
-    return longestElement;
+    return longest
 }
 
 // ●  Bài 4: Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết
@@ -38,9 +31,7 @@ function checkEndsWith(string, target) {
         return false
     }
     if (string != '' && target != '') {
-        let str = string.toLowerCase()
-        let tar = target.toLowerCase()
-        if (str.endsWith(tar)) {
+        if (string.endsWith(target)) {
             return true
         }
         else {
@@ -54,11 +45,9 @@ function checkEndsWith(string, target) {
 //  hoặc false (nếu không lặp).
 function checkDuplicate(arr) {
     for (i = 0; i <= arr.length; i++) {
-        if (arr.indexOf(arr[i]) == arr.lastIndexOf(arr[i])) {
-            return false
-        }
-        else {
+        if (arr.indexOf(arr[i]) != arr.lastIndexOf(arr[i])) {
             return true
         }
     }
+    return false
 }
