@@ -91,6 +91,7 @@ function toSpinalCase(str) {
 // không tính khoảng trắng và không phân biệt hoa thường), kết quả trả về true hoặc false. Ví dụ ''Race car'' trả về true, ''hello world''
 //  trả về false.
 function revstr(name) {
-    var name1 = name.split("").reverse().join("")
-    return name1 == name;
+    var name1 = name.toLowerCase().replaceAll(" ", "")
+    var name2 = name1.split("").reverse().join("")
+    return name1 == name2;
 }
