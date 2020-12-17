@@ -16,8 +16,19 @@ function sumBetween(a, b) {
 // Bài 2: Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.
 function divideSum(a) {
     var sum = 0;
-    for (i = 0; i < a; i++) {
+    for (i = 0; i <= a; i++) {
         if (a % i == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+function divideSum(a) {
+    var sum = a;
+    var b = a / 2;
+    for (i = 0; i <= b; i++) {
+        if (b % i == 0) {
             sum += i;
         }
     }
