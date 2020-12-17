@@ -28,7 +28,7 @@ function divideSum(a) {
     var sum = a;
     var b = a / 2;
     for (i = 0; i <= b; i++) {
-        if (b % i == 0) {
+        if (a % i == 0) {
             sum += i;
         }
     }
