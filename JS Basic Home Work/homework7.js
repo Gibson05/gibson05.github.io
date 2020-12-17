@@ -17,7 +17,7 @@ function sumBetween(a, b) {
 function divideSum(a) {
     var sum = 0;
     for (i = 0; i < a; i++) {
-        if (b % i == 0) {
+        if (a % i == 0) {
             sum += i;
         }
     }
