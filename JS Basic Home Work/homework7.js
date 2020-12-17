@@ -62,7 +62,7 @@ function smallerSum(b) {
 // Bài 5: Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ. 
 // Ví dụ: ''HELLO world'' => ''Hello World''.
 function uppercaseFirstLetter(str) {
-    var splStr = str.split('');
+    var splStr = str.toLowerCase().split('');
     for (var i = 0; i < splStr.length; i++) {
         if (i === 0) {
             splStr[i] = splStr[i].toUpperCase();
