@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.list-table {
+    width: 90%;
+    padding-bottom: 20px;
+}
+.table-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+tr:nth-child(1) {
+    background-color: #333A40;
+    color: white;
+    border: 1px solid #333A40;
+    font-weight: bold;
+}
+tr, td {
+    padding-left: 10px;
+    padding-right: 80px;
+}
+td {
+    height: 50px;
+}
+tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+.edit-text {
+    color: #36B7C5;
+}
+.edit-text:hover {
+    color: #2A7E87;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.delete-text {
+    color: #ED5068;
+}
+.delete-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.add-btn {
+    width: 80%; 
+    padding: 10px 0px 10px 0px;
+}
+.add-btn button {
+    padding: 0px 10px 0px 10px;
+    height: 30px;
+    color: white;
+    background-color: #00A751;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 200px 0px 200px;
+}
+.form-title {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0px 30px 0px;
+}
+.item {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+.form-text {
+    width: 15%;
+}
+.red-star {
+    color: red;
+}
+.form-input {
+    width: 85%;
+}
+.form-input input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #DCE1E5;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.form-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.back-btn button {
+    padding: 0px 10px 0px 10px;
+    height: 30px;
+    color: white;
+    background-color: #6B767D;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.save-btn button {
+    padding: 0px 10px 0px 10px;
+    height: 30px;
+    color: white;
+    background-color: #00A751;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
