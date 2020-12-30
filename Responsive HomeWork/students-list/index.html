@@ -13,65 +13,77 @@
     <div class="container">
         <div class="list-table">
             <div class="table-title">Danh sách học viên</div>
-            <div class="add-btn"><button><i class="fa fa-plus-circle"></i> Thêm học viên</button></div>
+            <div class="add-btn"><a href="form.html"><button><i class="add-student-btn fa fa-plus-circle"></i> Thêm học
+                        viên</button></a></div>
             <table>
-                <tr>
-                    <td>Họ tên</td>
-                    <td>Năm sinh</td>
-                    <td>Email</td>
-                    <td>Số Điện Thoại</td>
-                    <td></td>
-                </tr>
-                <tr>
+                <thead>
+                    <tr>
+                        <td>Họ tên</td>
+                        <td>Năm sinh</td>
+                        <td>Email</td>
+                        <td>Số Điện Thoại</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
                     <td>Winnifred Tribe</td>
                     <td>2000</td>
                     <td>wtribe@kcikstarter.com</td>
                     <td>867-130-6017</td>
                     <td><a class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
                             class="delete-text"><i class="fa fa-trash-o"></i> Xóa</a></td>
-                </tr>
-                <tr>
-                    <td>Jodie Nicklin</td>
-                    <td>2005</td>
-                    <td>jnicklin@hao123.com</td>
-                    <td>472-237-6018</td>
-                    <td><a class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
-                        class="delete-text"><i class="fa fa-trash-o"></i> Xóa</a></td>
-                </tr>
-                <tr>
-                    <td>Fernanda Howton</td>
-                    <td>2001</td>
-                    <td>fhowton@ebay.co.uk</td>
-                    <td>172-134-4609</td>
-                    <td><a class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
-                        class="delete-text"><i class="fa fa-trash-o"></i> Xóa</a></td>
-                </tr>
+                </tr> -->
+                </tbody>
             </table>
         </div>
-        <div class="form">
-            <div class="form-title">Thêm mới học viên</div>
-            <div class="item">
-                <div class="form-text">Họ tên <a class="red-star">*</a></div>
-                <div class="form-input"><input type="text"></div>
-            </div>
-            <div class="item">
-                <div class="form-text">Năm sinh</div>
-                <div class="form-input"><input type="text"></div>
-            </div>
-            <div class="item">
-                <div class="form-text">Email <a class="red-star">*</a></div>
-                <div class="form-input"><input type="text"></div>
-            </div>
-            <div class="item">
-                <div class="form-text">Phone <a class="red-star">*</a></div>
-                <div class="form-input"><input type="text"></div>
-            </div>
-            <div class="form-button">
-                <div class="back-btn"><button><i class="fa fa-angle-left"></i> Quay lại</button></div>
-                <div class="save-btn"><button><i class="fa fa-floppy-o"></i> Lưu</button></div>
-            </div>
-        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            renderStudents()
+        })
+
+        function renderStudents() {
+            $.ajax({
+                // bật Loading ... 
+                // bắt đầu gọi request lên serer lấy dữ liệu sinh viên
+                method: "GET",
+                url: "https://gibson-test-database.herokuapp.com/users",
+            })
+                .done(function (data) {
+                //đã thực hiện xong request
+                //tắt loading ................
+                //render giao diện dựa vào data lấy đc
+                    student = data
+                    for (i = 0; i < student.length; i++) {
+                        ele = $(`
+                <tr>
+                    <td>${student[i].name}</td>
+                    <td>${student[i].birthday}</td>
+                    <td>${student[i].email}</td>
+                    <td>${student[i].phone}</td>
+                    <td><a href="edit.html?id=${student[i].id}" class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
+                        class="delete-text" onclick="deleteStudent(${student[i].id})"><i class="fa fa-trash-o"></i> Xóa</a></td>
+                </tr>
+                `)
+                        $('tbody').append(ele)
+                    }
+                })
+
+        }
+        
+        function deleteStudent(id) {
+            $.ajax({
+                method: "DELETE",
+                url: `https://gibson-test-database.herokuapp.com/users/${id}`
+            }).done(() => {
+                //update Dom
+            })
+            $('tbody').html('')
+            renderStudents()
+        }
+    </script>
 </body>
 
 </html>

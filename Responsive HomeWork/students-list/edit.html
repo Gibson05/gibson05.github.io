@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="form">
+        <div class="form-title">Chỉnh sửa học viên</div>
+        <div class="item">
+            <div class="form-text">Họ tên <a class="red-star">*</a></div>
+            <div class="form-input"><input class="name" type="text"></div>
+        </div>
+        <div class="item">
+            <div class="form-text">Năm sinh</div>
+            <div class="form-input"><input class="birthday" type="text"></div>
+        </div>
+        <div class="item">
+            <div class="form-text">Email <a class="red-star">*</a></div>
+            <div class="form-input"><input class="email" type="text"></div>
+        </div>
+        <div class="item">
+            <div class="form-text">Phone <a class="red-star">*</a></div>
+            <div class="form-input"><input class="phone" type="text"></div>
+        </div>
+        <div class="form-button">
+            <div class="back-btn"><a href="index.html"><button><i class="fa fa-angle-left"></i> Quay lại</button></a></div>
+            <div class="save-btn"><a href="index.html"><button><i class="fa fa-floppy-o"></i> Lưu</button></a></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var storageID = location.search;
+        var studentID = storageID.substring(4, storageID.length)
+        $.ajax({
+                method: "GET",
+                url: `https://gibson-test-database.herokuapp.com/users/${studentID}`,
+            }).done(function (data) {
+                $(".name").val(data.name)
+                $(".birthday").val(data.birthday)
+                $(".email").val(data.email)
+                $(".phone").val(data.phone)
+            })
+         
+        $(".save-btn").click(function() {
+            $.ajax({
+            method: "PUT",
+            url: `https://gibson-test-database.herokuapp.com/users/${studentID}`,
+            data: {
+                name: $(".name").val(),
+                email: $(".email").val(),
+                phone: $(".phone").val(),
+                birthday: $(".birthday").val()
+            }
+            }).done(() => {
+                location.href = "index.html"
+            })
+        })
+    </script>
+</body>
+</html>

@@ -26,7 +26,7 @@ table {
     border-collapse: collapse;
     font-family: Arial, Helvetica, sans-serif;
 }
-tr:nth-child(1) {
+thead {
     background-color: #333A40;
     color: white;
     border: 1px solid #333A40;
@@ -56,6 +56,7 @@ tr:nth-child(even) {
 .delete-text:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: #d21633;
 }
 .add-btn {
     width: 80%; 
@@ -70,6 +71,9 @@ tr:nth-child(even) {
     outline: none;
     border-radius: 3px;
     cursor: pointer;
+}
+.add-btn button:hover {
+    background-color: #00c961;
 }
 .form {
     width: 100%;
@@ -127,6 +131,9 @@ tr:nth-child(even) {
     margin-right: 5px;
     cursor: pointer;
 }
+.back-btn button:hover {
+    background-color: #858f96;
+}
 .save-btn button {
     padding: 0px 10px 0px 10px;
     height: 30px;
@@ -136,4 +143,7 @@ tr:nth-child(even) {
     outline: none;
     border-radius: 3px;
     cursor: pointer;
+}
+.save-btn button:hover {
+    background-color: #00c961;
 }
