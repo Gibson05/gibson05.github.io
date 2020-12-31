@@ -44,6 +44,7 @@ tr:nth-child(even) {
 }
 .edit-text {
     color: #36B7C5;
+    text-decoration: none;
 }
 .edit-text:hover {
     color: #2A7E87;
@@ -52,6 +53,7 @@ tr:nth-child(even) {
 }
 .delete-text {
     color: #ED5068;
+    text-decoration: none;
 }
 .delete-text:hover {
     text-decoration: underline;

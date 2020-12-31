@@ -52,9 +52,9 @@
         })
 
         function renderStudents() {
+            // bật Loading ... 
             $("table").after($(`<img class="loading" src="https://media2.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif?cid=ecf05e47o6bj4jluy5j6s4hkce3dyoosfq79yihy82bqblxk&rid=giphy.gif"/>`))
             $.ajax({
-                // bật Loading ... 
                 // bắt đầu gọi request lên serer lấy dữ liệu sinh viên
                 method: "GET",
                 url: "https://gibson-test-database.herokuapp.com/users",
@@ -62,8 +62,8 @@
                 .done(function (data) {
                     //đã thực hiện xong request
                     //tắt loading ................
-                    //render giao diện dựa vào data lấy đc
                 $(".loading").remove()
+                    //render giao diện dựa vào data lấy đc
                 student = data
                 for (i = 0; i < student.length; i++) {
                     ele = $(`
