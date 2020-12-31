@@ -72,8 +72,10 @@
                     <td>${student[i].birthday}</td>
                     <td>${student[i].email}</td>
                     <td>${student[i].phone}</td>
-                    <td><a href="edit.html?id=${student[i].id}" class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | <a
-                        class="delete-text" onclick="deleteStudent(${student[i].id})"><i class="fa fa-trash-o"></i> Xóa</a></td>
+                    <td>
+                        <a href="edit.html?id=${student[i].id}" class="edit-text"><i class="fa fa-edit"></i> Chỉnh Sửa</a> | 
+                        <a class="delete-text" onclick="deleteStudent(${student[i].id}, this)"><i class="fa fa-trash-o"></i> Xóa</a>
+                    </td>
                 </tr>
                 `)
                         $('tbody').append(ele)
@@ -82,18 +84,23 @@
 
         }
 
-        function deleteStudent(id) {
+        
+        
+
+        function deleteStudent(id, element) {
+            let deleteElement = $(element).parent().parent()
             $(".delete-form").css("display","flex")
             $(".confirm-btn").click(() => {
                 $.ajax({
                 method: "DELETE",
                 url: `https://gibson-test-database.herokuapp.com/users/${id}`
                 }).done(() => {
-                    $('tbody').html('')
-                    renderStudents()
-                    $(".delete-form").css("display","none")
+                    deleteElement.remove();
+                    // $('tbody').html('')
+                    // renderStudents()
                 //update Dom
                 })
+                $(".delete-form").css("display","none");
             })
             $(".cancel-btn").click(() => {
                 $(".delete-form").css("display","none")
