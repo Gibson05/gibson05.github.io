@@ -15,6 +15,13 @@
             <div class="table-title">Danh sách học viên</div>
             <div class="add-btn"><a href="form.html"><button><i class="add-student-btn fa fa-plus-circle"></i> Thêm học
                         viên</button></a></div>
+            <div class="delete-form">
+                <div class="delete-form-text"><p>Are you sure you want to delete?</p></div>
+                <div class="delete-group-btn">
+                    <button class="confirm-btn">Yes</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -45,6 +52,7 @@
         })
 
         function renderStudents() {
+            $("table").after($(`<img class="loading" src="https://media2.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif?cid=ecf05e47o6bj4jluy5j6s4hkce3dyoosfq79yihy82bqblxk&rid=giphy.gif"/>`))
             $.ajax({
                 // bật Loading ... 
                 // bắt đầu gọi request lên serer lấy dữ liệu sinh viên
@@ -52,12 +60,13 @@
                 url: "https://gibson-test-database.herokuapp.com/users",
             })
                 .done(function (data) {
-                //đã thực hiện xong request
-                //tắt loading ................
-                //render giao diện dựa vào data lấy đc
-                    student = data
-                    for (i = 0; i < student.length; i++) {
-                        ele = $(`
+                    //đã thực hiện xong request
+                    //tắt loading ................
+                    //render giao diện dựa vào data lấy đc
+                $(".loading").remove()
+                student = data
+                for (i = 0; i < student.length; i++) {
+                    ele = $(`
                 <tr>
                     <td>${student[i].name}</td>
                     <td>${student[i].birthday}</td>
@@ -72,16 +81,23 @@
                 })
 
         }
-        
+
         function deleteStudent(id) {
-            $.ajax({
+            $(".delete-form").css("display","flex")
+            $(".confirm-btn").click(() => {
+                $.ajax({
                 method: "DELETE",
                 url: `https://gibson-test-database.herokuapp.com/users/${id}`
-            }).done(() => {
+                }).done(() => {
+                    $('tbody').html('')
+                    renderStudents()
                 //update Dom
+                })
+                $(".delete-form").css("display","none")
             })
-            $('tbody').html('')
-            renderStudents()
+            $(".cancel-btn").click(() => {
+                $(".delete-form").css("display","none")
+            })
         }
     </script>
 </body>
