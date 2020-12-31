@@ -91,9 +91,9 @@
                 }).done(() => {
                     $('tbody').html('')
                     renderStudents()
+                    $(".delete-form").css("display","none")
                 //update Dom
                 })
-                $(".delete-form").css("display","none")
             })
             $(".cancel-btn").click(() => {
                 $(".delete-form").css("display","none")
